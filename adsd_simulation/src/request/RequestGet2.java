@@ -6,23 +6,23 @@ import eduni.simjava.Sim_port;
 import eduni.simjava.Sim_stat;
 import eduni.simjava.Sim_system;
 
-public class RequestPost extends Sim_entity{
+public class RequestGet2 extends Sim_entity{
 
-	private Sim_port inRedeAberta;
-	private Sim_port outServidorOperacional;
+	private Sim_port inRedeFechada;
+	private Sim_port outServidorConsulta;
 	private double delay;
 	private Sim_stat status;
 
-	public RequestPost(String name) {
+	public RequestGet2(String name) {
 		super(name);
 
 		status = new Sim_stat();
 
-		this.inRedeAberta = new Sim_port("InRedeAberta");
-		this.outServidorOperacional = new Sim_port("OutServidorOperacional");
+		this.inRedeFechada = new Sim_port("InRedeFechada");
+		this.outServidorConsulta = new Sim_port("OutServidorOperacional");
 
-		add_port(inRedeAberta);
-		add_port(outServidorOperacional);
+		add_port(inRedeFechada);
+		add_port(outServidorConsulta);
 		
 	}
 
@@ -34,7 +34,7 @@ public class RequestPost extends Sim_entity{
 			sim_completed(e);
 
 			sim_trace(1, "going to the server.");
-			sim_schedule(outServidorOperacional, 0.0, 1);
+			sim_schedule(outServidorConsulta, 0.0, 1);
 		}
 	}
 }

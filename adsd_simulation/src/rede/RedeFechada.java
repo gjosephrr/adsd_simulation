@@ -14,7 +14,7 @@ public class RedeFechada extends Sim_entity{
 	private double delay;
 	private Sim_stat status;
 	
-	RedeFechada(String name, double average, double variance) {
+	public RedeFechada(String name, double average, double variance) {
 		super(name);
 
 		status = new Sim_stat();

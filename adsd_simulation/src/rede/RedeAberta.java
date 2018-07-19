@@ -1,6 +1,7 @@
 package rede;
 
 import eduni.simjava.*;
+import eduni.simjava.Sim_stat;
 
 public class RedeAberta extends Sim_entity {
 

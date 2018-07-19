@@ -11,7 +11,7 @@ public class BD extends Sim_entity {
 	private Sim_port outConsulta;
 	private double delay;
 
-	BD(String name, double delay) {
+public BD(String name, double delay) {
 		super(name);
 
 		inOperacional = new Sim_port("In");

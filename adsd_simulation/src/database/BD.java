@@ -14,16 +14,16 @@ public class BD extends Sim_entity {
 public BD(String name, double delay) {
 		super(name);
 
-		inOperacional = new Sim_port("In");
+		inOperacional = new Sim_port("InServidorOperacional");
 		add_port(inOperacional);
 
-		inConsulta = new Sim_port("InOperacional");
+		inConsulta = new Sim_port("InServidorConsulta");
 		add_port(inConsulta);
 
-		outOperacional = new Sim_port("outOperacional");
+		outOperacional = new Sim_port("OutServidorOperacional");
 		add_port(outOperacional);
 
-		outConsulta = new Sim_port("OutConsulta");
+		outConsulta = new Sim_port("OutServidorConsulta");
 		add_port(outConsulta);
 	}
 

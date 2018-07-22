@@ -14,6 +14,7 @@ import servidor.ServidorOperacional;
 public class Simulacao {
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
+		Sim_system.initialise();
 		
 		Cliente cliente = new Cliente("Cliente", 100);
 		Cliente cliente2 = new Cliente("Cliente2", 100);
@@ -33,8 +34,8 @@ public class Simulacao {
 		Sim_system.link_ports("Cliente", "OutRede", "RedeAberta", "InCliente");
 		Sim_system.link_ports("Cliente2", "OutRede", "RedeAberta", "InCliente2");
 		
-		Sim_system.link_ports("RedeAberta", "OutGET", "GETRequest", "InRedeFechada");
-		Sim_system.link_ports("RedeAberta", "OutPOST", "POSTRequest", "InRedeFechada");
+		Sim_system.link_ports("RedeAberta", "OutGET", "GETRequest", "InRedeAberta");
+		Sim_system.link_ports("RedeAberta", "OutPOST", "POSTRequest", "InRedeAberta");
 		
 		Sim_system.link_ports("GETRequest", "OutServidorOperacional", "ServidorOperacional", "InRequestGET");
 		Sim_system.link_ports("POSTRequest", "OutServidorOperacional", "ServidorOperacional", "InRequestPOST");

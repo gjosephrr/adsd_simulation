@@ -8,7 +8,8 @@ import eduni.simjava.Sim_system;
 
 public class RedeFechada extends Sim_entity{
 	
-	private Sim_port inDB;
+	private Sim_port inBD;
+	private Sim_port inConsulta;
 	private Sim_port outRedeAberta;
 	private Sim_port outGET2;
 	private double delay;
@@ -19,12 +20,14 @@ public class RedeFechada extends Sim_entity{
 
 		status = new Sim_stat();
 
-		this.inDB = new Sim_port("InDB");
+		this.inBD = new Sim_port("InBD");
 		this.outRedeAberta = new Sim_port("OutRedeAberta");
 		this.outGET2 = new Sim_port("OutGET2");
 
+		inConsulta = new Sim_port("InServidorConsulta");
+		add_port(inConsulta);
 
-		add_port(inDB);
+		add_port(inBD);
 		add_port(outRedeAberta);
 		add_port(outGET2);
 

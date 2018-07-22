@@ -19,7 +19,7 @@ public class RequestGet2 extends Sim_entity{
 		status = new Sim_stat();
 
 		this.inRedeFechada = new Sim_port("InRedeFechada");
-		this.outServidorConsulta = new Sim_port("OutServidorComsulta");
+		this.outServidorConsulta = new Sim_port("OutServidorConsulta");
 
 		add_port(inRedeFechada);
 		add_port(outServidorConsulta);

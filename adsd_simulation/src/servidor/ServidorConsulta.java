@@ -5,8 +5,8 @@ import eduni.simjava.*;
 public class ServidorConsulta extends Sim_entity {
 
 	private Sim_port inRequest;
-	private Sim_port inDB;
-	private Sim_port outDB;
+	private Sim_port inBD;
+	private Sim_port outBD;
 	private Sim_port outRede;
 	private double delay;
 	
@@ -16,13 +16,13 @@ public class ServidorConsulta extends Sim_entity {
 		this.delay = delay;
 		
 		this.inRequest = new Sim_port("InRequest");
-		this.inDB = new Sim_port("InDB");
-		this.outDB = new Sim_port("OutDB");
+		this.inBD = new Sim_port("InBD");
+		this.outBD = new Sim_port("OutBD");
 		this.outRede = new Sim_port("OutRede");
 
 		add_port(inRequest);
-		add_port(inDB);
-		add_port(outDB);
+		add_port(inBD);
+		add_port(outBD);
 		add_port(outRede);
 
 	}
